@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es"> 
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Encriptador</title>
+        <link rel="stylesheet" href="reset.css">
+        <link rel="shortcut icon" href="./public/logo.svg"/>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <header>
+                <img src="./public/logo.svg">
+        </header>
+        <main>
+            <div class="ingresoTexto">
+                <div class="area">
+                    <textarea name="ingreso" id="ingreso" id="ingreso" cols="20" rows="10" placeholder="Ingrese el texto aquí"></textarea>
+                    <p id="advertencia"></i>Solo letras minusculas y sin acentos</p>
+                </div>
+                <div class="botones">
+                    <input type="button" onclick="funcion('encriptar')" value="Encriptar" id="encriptar" class="botonEntradaTexto">
+                    <input type="button" onclick="funcion('desencriptar')" value="Desencriptar" id="desencriptar" class="botonEntradaTexto">   
+                </div>
+            </div>
+    
+            <div class="salidaTexto">
+                <div class="salidaAnterior" id="anterior">
+                    <img src="public/muneco.svg">
+                    <h2>Ningun mensaje fue encontrado</h2>
+                    <p>Ingresa el texto que desees encriptar o desencriptar</p>
+                </div>
+                <div class="salidaPosterior" id="posterior">
+                    <div class="texto">
+                        <p id="salidaTexto"></p>
+                    </div>
+                    <div class="boton">
+                        <input type="button" value="Copiar" id="copiar" onclick="copiar()">
+                    </div>
+                </div>
+            </div>
+        </main>
+        <script src="app.js"></script>
+    </body>
+</html>
